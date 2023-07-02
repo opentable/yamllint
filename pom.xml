@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.sbaudoin</groupId>
     <artifactId>yamllint</artifactId>
-    <version>1.5.0.1</version>
+    <version>1.5.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>YAMLLint</name>
@@ -60,7 +60,7 @@
         <connection>scm:git:https://github.com/opentable/yamllint.git</connection>
         <developerConnection>scm:git:ssh://github.com/opentable/yamllint.git</developerConnection>
         <url>https://github.com/opentable/yamllint.git</url>
-        <tag>yamllint-1.5.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <licenses>
