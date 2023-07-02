@@ -13,8 +13,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <release.repo.url>https://oss.sonatype.org/service/local/staging/deploy/maven2</release.repo.url>
-        <snapshot.repo.url>https://oss.sonatype.org/content/repositories/snapshots</snapshot.repo.url>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
@@ -423,13 +421,28 @@
                             </execution>
                         </executions>
                     </plugin>
-<!--                    <plugin>-->
-<!--                        <groupId>org.codehaus.mojo</groupId>-->
-<!--                        <artifactId>findbugs-maven-plugin</artifactId>-->
-<!--                        <version>3.0.5</version>-->
-<!--                    </plugin>-->
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <id>build-yamllint-opentable</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>opentable.snapshot</id>
+                    <name>opentable-snapshots</name>
+                    <uniqueVersion>true</uniqueVersion>
+                    <url>https://artifactory.otenv.com/snapshots</url>
+                </snapshotRepository>
+                <repository>
+                    <id>opentable</id>
+                    <name>opentable-internal</name>
+                    <url>https://artifactory.otenv.com/internal</url>
+                    <uniqueVersion>false</uniqueVersion>
+                </repository>
+            </distributionManagement>
         </profile>
     </profiles>
 </project>
