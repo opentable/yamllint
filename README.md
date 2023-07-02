@@ -14,6 +14,10 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
+
+
+Note: OpenTable fork of 1.5.0 to fix for SnakeYaml 2.0, clean up deps, etc.
+
 YAML Lint
 =========
 
