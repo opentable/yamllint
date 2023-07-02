@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2018-2020, Sylvain Baudoin
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +15,7 @@
  */
 package com.github.sbaudoin.yamllint;
 
+import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.reader.StreamReader;
 import org.yaml.snakeyaml.scanner.ScannerImpl;
 import org.yaml.snakeyaml.tokens.Token;
@@ -38,7 +39,7 @@ public class LintScanner {
      * @see LintStreamReader
      */
     public LintScanner(StreamReader reader) {
-        scanner = new ScannerImpl(reader);
+        scanner = new ScannerImpl(reader, new LoaderOptions());
     }
 
 
